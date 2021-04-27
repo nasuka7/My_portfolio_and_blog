@@ -8,7 +8,9 @@ function MyApp({ Component, pageProps, router }) {
         <Head>
           <title>My Site</title>
         </Head>
-        <Component {...pageProps} key={router.route} />
+        <div className="lg:max-w-7xl mx-auto">
+          <Component {...pageProps} key={router.route} />
+        </div>
       </div>
     </>
   );
