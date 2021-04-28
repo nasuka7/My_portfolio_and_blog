@@ -5,7 +5,6 @@ import Navbar from '../components/Navbar';
 const Profile = (): JSX.Element => {
   return (
     <div>
-      <Headbar />
       <Navbar />
     </div>
   );
