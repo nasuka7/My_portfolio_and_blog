@@ -21,7 +21,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="w-full relative px-72 mt-12">
+    <div className="w-full relative px-2 md:px-32 lg:px-72 mt-12">
       {errorMessage && <p>{errorMessage}</p>}
       <form
         method="post"
