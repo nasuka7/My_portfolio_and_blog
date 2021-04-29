@@ -1,12 +1,6 @@
-import React from 'react';
 import { useFormState } from "../contact/useFormState";
 import { useSendContactForm } from "../contact/useSendContactForm";
-
-interface ContactParams {
-  name: string;
-  email: string;
-  message: string;
-}
+import { ContactParams } from "../types";
 
 const Contact = () => {
   const [contact, handleChange] = useFormState<ContactParams>({
