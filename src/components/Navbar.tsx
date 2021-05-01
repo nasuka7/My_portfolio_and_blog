@@ -25,20 +25,20 @@ const Navbar = () => {
   const { pathname } = useRouter()
 
   useEffect(() => {
-    if (pathname === "/about" ) setActiveItem("About")
+    if (pathname === "/profile" ) setActiveItem("About")
     if (pathname === "/resume" ) setActiveItem("Blog")
     if (pathname === "/project" ) setActiveItem("Profile")
   }, [])
 
   return (
-    <div>
-      <span>{activeItem}</span>
-      <div>
-        <HeadberItem 
+    <div className="flex justify-center mt-4  gap-5">
+      <span className="font-bold border-b-2 border-gray-800">{activeItem}</span>
+      <div className="space-x-5 text-gray-400">
+        <HeadberItem
           activeItem={activeItem}
           setActiveItem={setActiveItem}
           name="About"
-          route="/about"
+          route="/profile"
         />
         <HeadberItem 
           activeItem={activeItem}
