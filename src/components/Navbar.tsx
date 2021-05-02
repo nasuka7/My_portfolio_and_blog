@@ -27,11 +27,11 @@ const Navbar = () => {
   useEffect(() => {
     if (pathname === "/profile" ) setActiveItem("About")
     if (pathname === "/resume" ) setActiveItem("Blog")
-    if (pathname === "/project" ) setActiveItem("Profile")
+    if (pathname === "/projects" ) setActiveItem("Profile")
   }, [])
 
   return (
-    <div className="flex justify-center mt-4  gap-5">
+    <div className="flex justify-center mt-4  gap-8 text-sm">
       <span className="font-bold border-b-2 border-gray-800">{activeItem}</span>
       <div className="space-x-5 text-gray-400">
         <HeadberItem
@@ -50,7 +50,7 @@ const Navbar = () => {
           activeItem={activeItem}
           setActiveItem={setActiveItem}
           name="Project"
-          route="/project"
+          route="/projects"
         />
       </div>
     </div>
