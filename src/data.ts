@@ -1,5 +1,6 @@
 import { AiOutlineDownCircle } from "react-icons/ai";
-import { IProject, Service } from "./types";
+import { BsCircleFill } from 'react-icons/bs';
+import { IProject, Service, Skill } from "./types";
 
 export const services: Service[] = [
   {
@@ -26,6 +27,57 @@ export const services: Service[] = [
     title: "Email",
     about: "kobakai0707baseball@gmail.com",
     Icon: AiOutlineDownCircle,
+  },
+]
+
+export const languages: Skill[] = [
+  {
+    name:"HTML",
+    level:"60%",
+    Icon:BsCircleFill
+  },
+  {
+    name:"CSS",
+    level:"50%",
+    Icon:BsCircleFill
+  },
+  {
+    name:"JavaScript",
+    level:"40%",
+    Icon:BsCircleFill
+  },
+  {
+    name:"React",
+    level:"40%",
+    Icon:BsCircleFill
+  },
+  {
+    name:"Next.js",
+    level:"40%",
+    Icon:BsCircleFill
+  },
+  {
+    name:"TailwindCSS",
+    level:"50%",
+    Icon:BsCircleFill
+  },
+]
+
+export const tools: Skill[] = [
+  {
+    name:"PhotoShop",
+    level:"50%",
+    Icon:BsCircleFill
+  },
+  {
+    name:"Illustrator",
+    level:"50%",
+    Icon:BsCircleFill
+  },
+  {
+    name:"Rhinoceros",
+    level:"70%",
+    Icon:BsCircleFill
   },
 ]
 

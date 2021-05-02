@@ -3,6 +3,7 @@ import ProjectCard from '../components/ProjectCard';
 import ProjectsNavbar from '../components/ProjectNavbar';
 import { Category } from '../types';
 import { projects as projectsData } from "../data";
+import Navbar from '../components/Navbar';
 
 const Projects = () => {
   const [projects, setProjects] = useState(projectsData);
@@ -26,6 +27,7 @@ const Projects = () => {
 
   return (
     <div className="px-10 py-2">
+      <Navbar />
       <ProjectsNavbar
         handlerFilterCategory={handlerFilterCategory}
         active={active}
