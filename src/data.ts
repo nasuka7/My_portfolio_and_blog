@@ -23,11 +23,11 @@ export const services: Service[] = [
     about: "Ultimate , Baseball",
     Icon: AiOutlineDownCircle,
   },
-  {
-    title: "Email",
-    about: "kobakai0707baseball@gmail.com",
-    Icon: AiOutlineDownCircle,
-  },
+  // {
+  //   title: "Email",
+  //   about: "kobakai0707baseball@gmail.com",
+  //   Icon: AiOutlineDownCircle,
+  // },
 ]
 
 export const languages: Skill[] = [

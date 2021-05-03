@@ -26,14 +26,14 @@ const Projects = () => {
   };
 
   return (
-    <div className="px-10 py-2">
+    <div>
       <Navbar />
       <ProjectsNavbar
         handlerFilterCategory={handlerFilterCategory}
         active={active}
       />
 
-      <div className="grid grid-cols-12 gap-4 my-3 relative">
+      <div className="grid grid-cols-12 gap-4 my-3 relative md:px-10">
         {projects.map((project) => (
           <div
             className="col-span-12 p-2 sm:col-span-6 lg:col-span-4 bg-gray-100 bg-opacity-50 dark:bg-dark-200 rounded-lg"

@@ -25,6 +25,7 @@ const Headbar: FunctionComponent = () => {
             <p className="text-xs">A freely</p>
           </a>
         </div>
+        
         <div className="space-x-4 mt-16 pt-2 hidden md:block">
           {navigation.map((item) => (
             <a
