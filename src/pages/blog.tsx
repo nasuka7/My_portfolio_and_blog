@@ -1,21 +1,11 @@
 import { parseISO, format } from 'date-fns';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
 import React from 'react';
 import { getAllPosts } from '../lib/data';
 
-const Blog = ({ posts }) => {
-  return (
-    <div>
-      <div className="space-y-4">
-        {posts.map((item) => (
-          <BlogListItem key={item.slug} {...item} />
-        ))}
-      </div>
-    </div>
-  );
-};
 
-export async function getStaticProps() {
+export const getStaticProps:GetStaticProps = async () => {
   const allPosts = getAllPosts();
   return {
     props: {
@@ -29,7 +19,7 @@ export async function getStaticProps() {
   };
 }
 
-export async function getStaticPaths() {
+export const getStaticPaths:GetStaticPaths = async () => {
   return {
     paths: getAllPosts().map((post) => ({
       params: {
@@ -56,4 +46,15 @@ function BlogListItem({ slug, title, date, content }) {
   );
 }
 
+const Blog = ({ posts }) => {
+  return (
+    <div>
+      <div className="space-y-4">
+        {posts.map((item) => (
+          <BlogListItem key={item.slug} {...item} />
+        ))}
+      </div>
+    </div>
+  );
+};
 export default Blog;

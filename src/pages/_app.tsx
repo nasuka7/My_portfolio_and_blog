@@ -7,9 +7,9 @@ function MyApp({ Component, pageProps, router }) {
     <>
       <div>
         <Head>
-          <title>My Site</title>
+          <title>KK BLOG</title>
         </Head>
-        <div className="lg:max-w-7xl mx-auto">
+        <div className="lg:max-w-5xl mx-auto">
           <Headbar />
           <Component {...pageProps} key={router.route} />
         </div>

@@ -2,7 +2,7 @@ import { format, parseISO } from 'date-fns';
 import { getAllPosts } from '../../lib/data';
 import renderToString from 'next-mdx-remote/render-to-string';
 import hydrate from 'next-mdx-remote/hydrate';
-import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
+import { GetStaticPaths, GetStaticProps } from 'next'
 
 export default function BlogPage({ title, date, content }) {
   const hydratedContent = hydrate(content);
