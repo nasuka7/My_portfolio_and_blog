@@ -15,9 +15,8 @@ const Blog = ({ posts }) => {
     </div>
   );
 };
-export default Blog;
 
-export const getStaticProps = () => {
+export async function getStaticProps(context) {
   const allPosts = getAllPosts();
   return {
     props: {
@@ -25,21 +24,21 @@ export const getStaticProps = () => {
         ...data,
         date: data.date.toISOString(),
         content,
-        slug,
+        slug
       })),
     },
-  }
+  };
 }
 
-export const getStaticPaths:GetStaticPaths = async () => {
+export async function getStaticPaths() {
   return {
     paths: getAllPosts().map((post) => ({
       params: {
         slug: post.slug,
-      },
+      }
     })),
     fallback: false,
-  };
+  }
 }
 
 function BlogListItem({ slug, title, date, content }) {
@@ -48,7 +47,10 @@ function BlogListItem({ slug, title, date, content }) {
       <div>
         <div className="mb-4">
           <Link href={`/blog/${slug}`}>
-            <a className="font-bold"><span className="mr-2">・</span>{title}</a>
+            <a className="font-bold">
+              <span className="mr-2">・</span>
+              {title}
+            </a>
           </Link>
         </div>
         <div className="text-sm">{format(parseISO(date), 'MMMM do, uuu')}</div>
@@ -58,4 +60,4 @@ function BlogListItem({ slug, title, date, content }) {
   );
 }
 
-
+export default Blog;

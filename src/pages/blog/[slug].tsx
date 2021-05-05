@@ -16,27 +16,27 @@ export default function BlogPage({ title, date, content }) {
   );
 }
 
-export const getStaticProps:GetStaticProps = async context => {
+export async function getStaticProps(context) {
   const { params } = context;
   const allPosts = getAllPosts();
-  const { data, content } = allPosts.find((item) => item.slug === params.slug);
-  const mdxSource = await renderToString(content);
+  const {data, content} = allPosts.find((item) => item.slug === params.slug);
+  const mdxSource = await renderToString(content)
   return {
     props: {
       ...data,
       date: data.date.toISOString(),
-      content: mdxSource,
+      content: mdxSource
     },
   };
 }
 
-export const getStaticPaths:GetStaticPaths = async () => {
+export async function getStaticPaths() {
   return {
     paths: getAllPosts().map((post) => ({
       params: {
         slug: post.slug,
-      },
+      }
     })),
     fallback: false,
-  };
+  }
 }
