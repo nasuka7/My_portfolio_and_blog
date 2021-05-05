@@ -1,11 +1,11 @@
 import { parseISO, format } from 'date-fns';
-import { GetServerSideProps, GetStaticPaths } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
 import React from 'react';
 import { getAllPosts } from '../lib/data';
 
 
-export const getServerSideProps:GetServerSideProps = async () => {
+export const getStaticProps:GetStaticProps = async () => {
   const allPosts = getAllPosts();
   return {
     props: {
@@ -16,6 +16,11 @@ export const getServerSideProps:GetServerSideProps = async () => {
         slug,
       })),
     },
+  };
+}
+
+export const getStaticPaths:GetStaticPaths = async () => {
+  return {
     paths: getAllPosts().map((post) => ({
       params: {
         slug: post.slug,
@@ -24,12 +29,6 @@ export const getServerSideProps:GetServerSideProps = async () => {
     fallback: false,
   };
 }
-
-// export const getStaticPaths:GetStaticPaths = async () => {
-//   return {
-    
-//   };
-// }
 
 function BlogListItem({ slug, title, date, content }) {
   return (
@@ -40,7 +39,7 @@ function BlogListItem({ slug, title, date, content }) {
             <a className="font-bold"><span className="mr-2">・</span>{title}</a>
           </Link>
         </div>
-        <div className="text-sm float-right">{format(parseISO(date), 'MMMM do, uuu')}</div>
+        <div className="text-sm">{format(parseISO(date), 'MMMM do, uuu')}</div>
         <div>{content.substr(0, 50)}</div>
       </div>
     </div>
