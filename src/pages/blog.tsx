@@ -4,8 +4,20 @@ import Link from 'next/link';
 import React from 'react';
 import { getAllPosts } from '../lib/data';
 
+const Blog = ({ posts }) => {
+  return (
+    <div>
+      <div className="space-y-4">
+        {posts.map((item) => (
+          <BlogListItem key={item.slug} {...item} />
+        ))}
+      </div>
+    </div>
+  );
+};
+export default Blog;
 
-export const getStaticProps:GetStaticProps = async () => {
+export const getStaticProps = () => {
   const allPosts = getAllPosts();
   return {
     props: {
@@ -16,7 +28,7 @@ export const getStaticProps:GetStaticProps = async () => {
         slug,
       })),
     },
-  };
+  }
 }
 
 export const getStaticPaths:GetStaticPaths = async () => {
@@ -46,15 +58,4 @@ function BlogListItem({ slug, title, date, content }) {
   );
 }
 
-const Blog = ({ posts }) => {
-  return (
-    <div>
-      <div className="space-y-4">
-        {posts.map((item) => (
-          <BlogListItem key={item.slug} {...item} />
-        ))}
-      </div>
-    </div>
-  );
-};
-export default Blog;
+
