@@ -32,14 +32,14 @@ export const getStaticPaths:GetStaticPaths = async () => {
 
 function BlogListItem({ slug, title, date, content }) {
   return (
-    <div className="border boder-blue-300 shadow hover:shadow-md hover:border-black-200 rounded-md p-4 transion duration-500 ease-in-out">
+    <div className="mx-auto border my-4 shadow hover:shadow-md hover:border-black-600 rounded-md p-2 transion duration-500 ease-in-out">
       <div>
-        <div>
+        <div className="mb-4">
           <Link href={`/blog/${slug}`}>
-            <a className="font-bold">{title}</a>
+            <a className="font-bold"><span className="mr-2">・</span>{title}</a>
           </Link>
         </div>
-        <div className="text-sm">{format(parseISO(date), 'MMMM do, uuu')}</div>
+        <div className="text-sm float-right">{format(parseISO(date), 'MMMM do, uuu')}</div>
         <div>{content.substr(0, 50)}</div>
       </div>
     </div>

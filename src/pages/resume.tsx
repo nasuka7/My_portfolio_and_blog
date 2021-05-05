@@ -1,4 +1,4 @@
-import Bar from '../components/Bar';
+import Bar from '../components/SkillBar';
 import Navbar from '../components/Navbar';
 import { languages, tools } from '../data';
 

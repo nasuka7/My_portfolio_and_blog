@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
 import { Skill } from '../types';
 
-const Bar: FunctionComponent<{ data: Skill }> = ({
+const SkillBar: FunctionComponent<{ data: Skill }> = ({
   data: { Icon, level, name },
 }) => {
   const bar_width = `${level}`;
@@ -19,4 +19,4 @@ const Bar: FunctionComponent<{ data: Skill }> = ({
   );
 };
 
-export default Bar;
+export default SkillBar;
