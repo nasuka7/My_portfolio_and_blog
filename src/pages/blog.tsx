@@ -1,11 +1,11 @@
 import { parseISO, format } from 'date-fns';
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetServerSideProps, GetStaticPaths } from 'next';
 import Link from 'next/link';
 import React from 'react';
 import { getAllPosts } from '../lib/data';
 
 
-export const getStaticProps:GetStaticProps = async () => {
+export const getServerSideProps:GetServerSideProps = async () => {
   const allPosts = getAllPosts();
   return {
     props: {
