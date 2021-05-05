@@ -1,5 +1,5 @@
 import { format, parseISO } from 'date-fns';
-import { getAllPosts } from '../lib/data';
+import { getAllPosts } from '../../lib/data';
 import renderToString from 'next-mdx-remote/render-to-string';
 import hydrate from 'next-mdx-remote/hydrate';
 
