@@ -16,11 +16,6 @@ export const getServerSideProps:GetServerSideProps = async () => {
         slug,
       })),
     },
-  };
-}
-
-export const getStaticPaths:GetStaticPaths = async () => {
-  return {
     paths: getAllPosts().map((post) => ({
       params: {
         slug: post.slug,
@@ -29,6 +24,12 @@ export const getStaticPaths:GetStaticPaths = async () => {
     fallback: false,
   };
 }
+
+// export const getStaticPaths:GetStaticPaths = async () => {
+//   return {
+    
+//   };
+// }
 
 function BlogListItem({ slug, title, date, content }) {
   return (
