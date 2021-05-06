@@ -12,29 +12,24 @@ export default function BlogId({ blog }) {
   );
 }
 
-// 静的生成のためのパスを指定します
 export const getStaticPaths = async () => {
   const key = {
-    headers: {'X-API-KEY': process.env.API_KEY},
+    headers: { 'X-API-KEY': process.env.API_KEY },
   };
   const data = await fetch('https://nazca.microcms.io/api/v1/blogs', key)
-    .then(res => res.json())
+    .then((res) => res.json())
     .catch(() => null);
-  const paths = data.contents.map(content => `/blog/${content.id}`);
-  return {paths, fallback: false};
+  const paths = data.contents.map((content) => `/blog/${content.id}`);
+  return { paths, fallback: false };
 };
 
-// データをテンプレートに受け渡す部分の処理を記述します
-export const getStaticProps = async context => {
+export const getStaticProps = async (context) => {
   const id = context.params.id;
   const key = {
-    headers: {'X-API-KEY': process.env.API_KEY},
+    headers: { 'X-API-KEY': process.env.API_KEY },
   };
-  const data = await fetch(
-    'https://nazca.microcms.io/api/v1/blogs/' + id,
-    key,
-  )
-    .then(res => res.json())
+  const data = await fetch('https://nazca.microcms.io/api/v1/blogs/' + id, key)
+    .then((res) => res.json())
     .catch(() => null);
   return {
     props: {
