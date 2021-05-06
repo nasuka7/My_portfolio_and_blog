@@ -21,7 +21,7 @@ const Headbar: FunctionComponent = () => {
           <a href="/">
             <p className="text-xs">Kai's</p>
             <p className="text-xs">Outgoing </p>
-            <p className="text-xs">Blog </p>
+            <p className="text-xs">Blog</p>
             <p className="text-xs">A freely</p>
           </a>
         </div>
@@ -113,21 +113,21 @@ const Headbar: FunctionComponent = () => {
               </a>
 
               <a
-                href="blog"
+                href="/blog"
                 className="text-gray-800 border-b-2 border-gray-200  hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
                 Blog
               </a>
 
               <a
-                href="profile"
+                href="/profile"
                 className="text-gray-800 border-b-2 border-gray-200  hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
                 Profile
               </a>
 
               <a
-                href="contact"
+                href="/contact"
                 className="text-gray-800 border-b-2 border-gray-200  hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
                 Contact

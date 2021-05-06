@@ -1,7 +1,6 @@
-import { Head } from 'next/document';
 import React from 'react';
 
-const Index = (): JSX.Element => {
+const Index = () => {
   return (
     <div>
       <p className="text-4xl font-thin flex justify-center my-64">

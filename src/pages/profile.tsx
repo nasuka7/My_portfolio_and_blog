@@ -1,5 +1,3 @@
-// import { GetServerSideProps, GetServerSidePropsContext } from 'next';
-import { GetServerSideProps, GetServerSidePropsContext } from 'next';
 import React from 'react';
 import Navbar from '../components/Navbar';
 import ServiceCard from '../components/ServiceCard';
@@ -40,12 +38,6 @@ const Profile = () => {
       </div>
     </div>
   );
-};
-
-export const getServerSideProps: GetServerSideProps = async (
-  context: GetServerSidePropsContext
-) => {
-  return { props: { endpoint: process.env.VERCEL_URL } };
 };
 
 export default Profile;
