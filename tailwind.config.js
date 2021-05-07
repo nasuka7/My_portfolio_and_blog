@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  purge: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
   darkMode: "class",
   theme: {
     extend: {
@@ -19,5 +19,5 @@ module.exports = {
       textColor: ['active'],
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [],
 };
