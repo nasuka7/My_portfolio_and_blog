@@ -1,5 +1,6 @@
 import { Transition } from '@headlessui/react';
 import { FunctionComponent, useState } from 'react';
+import SocialNetworkingService from './SocialMedia';
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
@@ -25,7 +26,10 @@ const Headbar: FunctionComponent = () => {
             <p className="text-xs">A freely</p>
           </a>
         </div>
-        
+
+        <div className="absolute ml-20 mt-20">
+          <SocialNetworkingService />
+        </div>
         <div className="space-x-4 mt-16 pt-2 hidden md:block">
           {navigation.map((item) => (
             <a
@@ -45,7 +49,7 @@ const Headbar: FunctionComponent = () => {
         </div>
       </div>
 
-      {/* {モバイル版のメニュー} */}
+      {/* モバイル */}
       <div className="float-right mr-3 -mt-12 md:hidden">
         <button
           onClick={() => setOpen(!open)}
