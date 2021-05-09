@@ -2,16 +2,16 @@ import Link from "next/link";
 
 const Blog = ({blog}) => {
   return (
-    <div>
-      <ul>
+    <div className="">
+      <div className="block mt-10 md:ml-24">
         {blog.map((blog) => (
-          <li key={blog.id}>
-            <Link href={`blog/${blog.id}`}>
-              <a>{blog.title}</a>
+          <div className="my-4" key={blog.id}>
+            <Link href={`/blog/${blog.id}`}>
+              <a><span className="mr-1">・</span>{blog.title}</a>
             </Link>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

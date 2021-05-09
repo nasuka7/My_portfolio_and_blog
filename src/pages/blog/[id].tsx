@@ -1,14 +1,15 @@
 export default function BlogId({ blog }) {
   return (
-    <main>
-      <h1>{blog.title}</h1>
-      <p>{blog.publishedAt}</p>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `${blog.content}`,
-        }}
-      />
-    </main>
+    <div>
+      <article className="prose max-w-3xl mx-auto mt-12">
+        <h1 className="border-b-2 border-gray-700 pb-2">{blog.title}</h1>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `${blog.content}`,
+          }}
+        />
+      </article>
+    </div>
   );
 }
 
