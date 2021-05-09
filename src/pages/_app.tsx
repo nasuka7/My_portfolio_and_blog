@@ -1,6 +1,7 @@
-import "../styles/globals.css";
+import "@/styles/globals.css";
 import Head from "next/head";
-import Headbar from "../components/Headbar";
+import Headbar from "@/components/Headbar";
+import Footer from "@/components/Footer";
 
 function MyApp({ Component, pageProps, router }) {
   return (
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps, router }) {
         <div className="lg:max-w-5xl mx-auto">
           <Headbar />
           <Component {...pageProps} key={router.route} />
+          <Footer />
         </div>
       </div>
     </>
