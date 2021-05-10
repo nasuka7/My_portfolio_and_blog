@@ -84,23 +84,22 @@ export const tools: Skill[] = [
 export const projects: IProject[] = [
   {
     id: 1,
-    name: "Twitter Clone",
-    description: "Twitterのクローンです。",
-    image_path: "/images/tt.jpg",
+    name: "Demo App",
+    description: "DemoApp1です",
+    image_path: "/demo_image.JPG",
     deployed_url: "",
     github_url: "",
-    category: ["react"],
+    category: ["React"],
     key_techs: ["React"],
   },
   {
     id: 2,
-    name: "Photo Search App",
-    description: "写真の検索サイトです",
-    image_path: "/images/tt.jpg",
+    name: "Demo App2",
+    description: "DemoApp2です",
+    image_path: "/demo_image.JPG",
     deployed_url: "",
     github_url: "",
-    category: ["java"],
-    key_techs: ["Java"],
+    category: ["Javascript"],
+    key_techs: ["Javascript"],
   },
-  
 ]
