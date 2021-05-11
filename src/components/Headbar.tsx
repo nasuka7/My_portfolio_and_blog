@@ -1,6 +1,9 @@
 import { Transition } from '@headlessui/react';
-import { FunctionComponent, useState } from 'react';
+import { FunctionComponent, useState, useEffect } from 'react';
 import SocialNetworkingService from './SocialMedia';
+import { useTheme } from 'next-themes';
+import { BsMoon, BsSun } from 'react-icons/bs';
+import DarkmodeToggle from './DarkmodeToggle';
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
@@ -15,6 +18,7 @@ function classNames(...classes) {
 
 const Headbar: FunctionComponent = () => {
   const [open, setOpen] = useState(false);
+
   return (
     <div className="pb-2 text-sm font-semibold border-b border-gray-300">
       <div className="flex justify-between">
@@ -27,9 +31,6 @@ const Headbar: FunctionComponent = () => {
           </a>
         </div>
 
-        <div className="absolute ml-20 mt-20">
-          <SocialNetworkingService />
-        </div>
         <div className="space-x-4 mt-16 pt-2 hidden md:block">
           {navigation.map((item) => (
             <a
@@ -46,6 +47,12 @@ const Headbar: FunctionComponent = () => {
               {item.name}
             </a>
           ))}
+          <div className="float-right mt-1 pr-4">
+            <SocialNetworkingService />
+          </div>
+          <div className="float-right mt-1 ">
+            <DarkmodeToggle />
+          </div>
         </div>
       </div>
 
