@@ -1,8 +1,6 @@
 import { Transition } from '@headlessui/react';
 import { FunctionComponent, useState, useEffect } from 'react';
 import SocialNetworkingService from './SocialMedia';
-import { useTheme } from 'next-themes';
-import { BsMoon, BsSun } from 'react-icons/bs';
 import DarkmodeToggle from './DarkmodeToggle';
 
 const navigation = [
@@ -22,7 +20,7 @@ const Headbar: FunctionComponent = () => {
   return (
     <div className="pb-2 text-sm font-semibold border-b border-gray-300">
       <div className="flex justify-between">
-        <div className="flex ml-4 pt-8 text-red-600 hover:text-gray-800">
+        <div className="flex ml-4 pt-8 text-red-600 hover:text-gray-800 dark:text-red-200 dark:hover:text-gray-">
           <a href="/">
             <p className="text-xs">Kai's</p>
             <p className="text-xs">Outgoing </p>
@@ -38,8 +36,8 @@ const Headbar: FunctionComponent = () => {
               href={item.href}
               className={classNames(
                 item.current
-                  ? 'text-gray-200'
-                  : 'text-gray-800 hover:bg-gray-600 hover:text-gray-100',
+                  ? 'text-gray-100 dark:text-gray-800'
+                  : 'text-gray-800 dark:text-gray-100 hover:bg-gray-600 dark:hover:bg-gray-300 hover:text-gray-100 dark:hover:text-gray-800',
                 'px-4 py-2 rounded-md text-sm font-medium'
               )}
               aria-current={item.current ? 'page' : undefined}

@@ -7,7 +7,7 @@ const resume = () => {
     <div>
       <Navbar />
       <div className="md:max-w-3xl sm:max-w-md text-sm tracking-wider leading-loose mx-auto mt-12"> 
-        <p className="text-xl font-bold mb-12 border-b-2 border-red-300 p-2">
+        <p className="text-xl font-bold mb-12 border-b border-red-300 dark:border-gray-400 p-2">
           Resume
         </p>
         <div className="grid gap-4 md:grid-cols-2 mt-12">

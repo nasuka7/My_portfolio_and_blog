@@ -84,7 +84,7 @@ const ProjectCard: FunctionComponent<{
 
           <button
             onClick={() => setShowDetail(null)}
-            className="absolute p-1 bg-gray-200 top-3 right-3 rounded-full focus:outline-none dark:bg:dark-200"
+            className="absolute p-1 bg-gray-200 top-3 right-3 rounded-full focus:outline-none text-gray-800"
           >
             <AiOutlineCloseSquare size={20} />
           </button>

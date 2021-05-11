@@ -1,15 +1,13 @@
 export default function BlogId({ blog }) {
   return (
-    <div>
-      <article className="prose max-w-3xl mx-auto mt-12">
-        <h1 className="border-b-2 border-gray-700 pb-2">{blog.title}</h1>
+      <article className="prose dark:prose-dark max-w-3xl mx-auto mt-12">
+        <h1 className="border-b border-gray-700 dark:border-gray-400 pb-2 ">{blog.title}</h1>
         <div
           dangerouslySetInnerHTML={{
             __html: `${blog.content}`,
           }}
         />
       </article>
-    </div>
   );
 }
 

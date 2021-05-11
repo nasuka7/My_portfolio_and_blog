@@ -3,7 +3,7 @@ import { SiQiita } from 'react-icons/si';
 
 const SocialNetworkingService = () => {
   return (
-    <div className="flex space-x-3 text-lg">
+    <div className="flex space-x-4 text-lg">
       <a
         className="flex item-center justify-center"
         href="https://twitter.com/nasuka315"

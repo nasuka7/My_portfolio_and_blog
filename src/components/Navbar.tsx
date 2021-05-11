@@ -32,8 +32,8 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-center mt-6  gap-8 text-sm">
-      <span className="font-bold border-b-2 border-gray-800">{activeItem}</span>
-      <div className="space-x-5 text-gray-400">
+      <span className="font-bold border-b-2 border-gray-800 dark:border-gray-100">{activeItem}</span>
+      <div className="space-x-5 text-gray-400 dark:text-gray-300">
         <HeadberItem
           activeItem={activeItem}
           setActiveItem={setActiveItem}

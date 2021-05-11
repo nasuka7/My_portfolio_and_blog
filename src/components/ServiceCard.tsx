@@ -11,7 +11,7 @@ const ServiceCard: FunctionComponent<{ service: Service }> = ({
   };
 
   return (
-    <div className="flex p-4 bg-yellow-100 bg-opacity-20 space-y-4 mb-4 pt-2">
+    <div className="flex p-4 bg-yellow-100 bg-opacity-20 dark:bg-gray-800 space-y-4 mb-4 pt-2">
       <Icon className="w-4 h-4 mr-6 mt-6" />
       <h4 className="font-bold -ml-2 mr-12">{title}</h4>
       <div className="absolute ml-48">
