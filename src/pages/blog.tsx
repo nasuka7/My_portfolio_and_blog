@@ -7,7 +7,7 @@ const Blog = ({blog}) => {
         {blog.map((blog) => (
           <div className="my-4" key={blog.id}>
             <Link href={`/blog/${blog.id}`}>
-              <a><span className="mr-8">・</span>{blog.title}</a>
+              <a><span className="mr-5">・</span>{blog.title}</a>
             </Link>
           </div>
         ))}
