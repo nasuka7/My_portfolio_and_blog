@@ -18,7 +18,8 @@ const Profile = () => {
           現在はReactの勉強に力を入れており、近い目標として,短中期のインターンシップに参加することを設定している。
         </p>
         <p>
-          　学習している技術としてはモダンフロントエンドが多く、最近はReactとTailwind CSSを使用した開発物の作成をしている。このポートフォリオもこの2つを使用している。
+          　学習している技術としてはモダンフロントエンドが多く、最近はReactとTailwind
+          CSSを使用した開発物の作成をしている。このポートフォリオもこの2つを使用している。
         </p>
 
         <h3 className="font-bold my-5">・Hobby</h3>
@@ -27,13 +28,9 @@ const Profile = () => {
         </p>
         <div>
           <h3 className="font-bold my-5">・MyData</h3>
-          <div>
-            {services.map((service) => (
-              <div>
-                <ServiceCard service={service} />
-              </div>
-            ))}
-          </div>
+          {services.map((service) => (
+            <ServiceCard service={service} key={service.title} />
+          ))}
         </div>
       </div>
     </div>

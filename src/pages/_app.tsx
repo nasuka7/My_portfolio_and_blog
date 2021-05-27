@@ -1,8 +1,8 @@
-import "@/styles/globals.css";
-import Head from "next/head";
-import Headbar from "@/components/Headbar";
-import Footer from "@/components/Footer";
-import { ThemeProvider } from 'next-themes'
+import '@/styles/globals.css';
+import Head from 'next/head';
+import Headbar from '@/components/Headbar';
+import Footer from '@/components/Footer';
+import { ThemeProvider } from 'next-themes';
 
 function MyApp({ Component, pageProps, router }) {
   return (
