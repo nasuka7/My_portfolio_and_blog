@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps, router }) {
         <Head>
           <title>KO BLOG A freely</title>
         </Head>
-        <div className="lg:max-w-5xl mx-auto">
+        <div className="lg:max-w-7xl md:max-w-xl max-w-xs mx-auto">
           <Headbar />
           <Component {...pageProps} key={router.route} />
           <Footer />
