@@ -15,6 +15,7 @@ const DarkmodeToggle = () => {
       <button
         aria-label="DarkmodeToggle"
         type="button"
+        className="hover:opacity-50 rounded-none"
         onClick={changeTheme}
       >
         {mounted && (
